@@ -8,7 +8,7 @@ from streamlit_folium import folium_static
 # Initate Fixed Elements
 parameters = {"SC Population": "population_sc", "Approximate Disengagement Rate (ADR)": "adr", "SC Schemes (SJSA Dept)": "sjsa_schemes"}
 bar_colors = ["darkgreen", "green", "yellow", "orange", "red", "darkred"]
-state_location = {"Maharashtra": [18.95,76.54], "Punjab": [30.9010, 75.8573], "Bihar": [25.7850, 85.4798], "Karnataka": [15.317, 75.73]}
+state_location = {"Maharashtra": [18.95,76.54], "Punjab": [30.9010, 75.8573], "Bihar": [25.7850, 85.898], "Karnataka": [15.317, 75.73]}
 state_zoom = {"Maharashtra": 7, "Punjab": 7.5, "Bihar": 7.5, "Karnataka": 7}
 
 # Create a sidebar
@@ -131,7 +131,7 @@ g = folium.GeoJson(
 colormap.add_to(m)
 
 # Add the map to the streamlit app
-folium_static(m, width=800, height=700)
+folium_static(m, width=1000, height=700)
 
 if selected_parameter != "sjsa_schemes":
     st.markdown(f"<h5 style='text-align: left'>GENDER: {selectbox_1}</h5>", unsafe_allow_html=True)
